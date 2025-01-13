@@ -5,9 +5,15 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import type {LinksFunction} from "@remix-run/node";
-
+import type {LinksFunction, MetaFunction} from "@remix-run/node";
 import "./tailwind.css";
+
+export const meta: MetaFunction = () => {
+  return [
+    {title: "Chat"},
+    {name: "description", content: "The fastest LLM chat app"},
+  ];
+};
 
 export const links: LinksFunction = () => [
   {rel: "preconnect", href: "https://fonts.googleapis.com"},
