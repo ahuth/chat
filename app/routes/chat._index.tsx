@@ -5,7 +5,7 @@ import {
   type ClientActionFunctionArgs,
 } from "@remix-run/react";
 import {assert} from "smart-invariant";
-import {createThread} from "~/models/thread";
+import {createThread} from "@/models/thread";
 
 export async function clientAction({request}: ClientActionFunctionArgs) {
   const formData = await request.formData();
